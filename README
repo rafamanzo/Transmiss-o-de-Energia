@@ -1,0 +1,34 @@
+IME - USP
+São Paulo - 21/03/2011
+Rafael Reggiani Manzo
+
+Segunda tarefa de MAC0328 - Algoritmos em grafos
+
+Solução para o problema da Transmissão de Energia (https://br.spoj.pl/problems/ENERGIA/) utlizando conceitos básicos de grafos.
+
+Resultados SPOJ:
+* Consumo de memória ?.?M
+* Tempo ?.?s
+
+Ambiente de desenvolvimento:
+
+* Linux - Ubuntu Netbook Remix v10.10
+* GCC 4.4
+
+Entrada:
+* A entrada esperada é no seguinte formato:
+    6 7
+    1 2
+    2 3
+    3 4
+    4 5
+    5 6
+    6 2
+    1 5
+    4 3
+    1 2
+    4 2
+    1 4
+    0 0
+* Onde a primeira linha significa que serão 6estações e que há 7 linhas de transmissão.
+* As demais linhas são as as linhas de transmissão. Ou seja: há uma linha que liga a estação 1 à estação 2; 2 à 3; 3 à 4;
