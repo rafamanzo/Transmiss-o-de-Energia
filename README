@@ -15,6 +15,9 @@ Ambiente de desenvolvimento:
 * Linux - Ubuntu Netbook Remix v10.10
 * GCC 4.4
 
+Boa parte do código reproveitado da tarefa anterior:
+* https://github.com/rafamanzo/Mesa-da-Sra.-Montagny
+
 Entrada:
 * A entrada esperada é no seguinte formato:
     6 7
