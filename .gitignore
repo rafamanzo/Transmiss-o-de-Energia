@@ -1,9 +1,11 @@
 digraph.o
 arc.o
 main.o
+energia.o
 io.o
 input
 output
 Energia
+in
 out
 diff

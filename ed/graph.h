@@ -7,12 +7,11 @@
 /* 6797150                        */
 /**********************************/
 
-#include "ed/vertex.h"
-#include "ed/digraph.h"
-#include "energia.h"
+#define GRAPHinit DIGRAPHinit
+#define GRAPHdestroy DIGRAPHdestroy
+#define GRAPHshow DIGRAPHshow
+#define GRAPHpath DIGRAPHpath
+#define Graph Digraph
 
-int main(int argc, const char* argv[]){
-  solver();
-  return 0;
-}
-
+void GRAPHinsertE(Graph G, Vertex v, Vertex w);
+void GRAPHremoveE(Graph G, Vertex v, Vertex w);

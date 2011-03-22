@@ -7,5 +7,5 @@
 /* 6797150                        */
 /**********************************/
 
-Graph inputInstance();
+Digraph inputInstance();
 void outInstance(int instance, int response);

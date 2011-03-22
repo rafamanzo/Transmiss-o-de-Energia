@@ -11,10 +11,11 @@
 #include <stdlib.h>
 #include "ed/vertex.h"
 #include "ed/digraph.h"
+#include "ed/graph.h"
 #include "io.h"
 
 Digraph inputInstance(){
-  Digraph G;
+  Graph G;
   int in1, in2;
   int relations, i;
 
@@ -22,12 +23,16 @@ Digraph inputInstance(){
     return NULL;
   }
 
-  G = DIGRAPHinit(in1 + 1);
+  if(in1 <= 0 || in2 <= 0){
+    return NULL;
+  }
+
+  G = GRAPHinit(in1 + 1);
   relations = in2;
 
   for(i = 0; i < relations; i++){
     scanf("%d %d", &in1, &in2);
-    DIGRAPHinsertA(G, in1, in2);
+    GRAPHinsertE(G, in1, in2);
   }
 
   return G;  

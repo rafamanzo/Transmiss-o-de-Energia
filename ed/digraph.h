@@ -7,7 +7,7 @@
 /* 6797150                        */
 /**********************************/
 
-#define MAXVERTEX 1000
+#define MAXVERTEX 101
 
 struct digraph{
   int V;
@@ -18,6 +18,8 @@ struct digraph{
 typedef struct digraph *Digraph;
 
 void lblInit();
+void lblReset();
+void lblDestroy();
 Digraph DIGRAPHinit(int vertexCount);
 void DIGRAPHdestroy(Digraph G);
 int** MATRIXint(int r, int c, int val);

@@ -15,13 +15,21 @@
 int *lbl;
 
 void lblInit(){
-  int i;
-
   lbl = malloc(MAXVERTEX*sizeof(int));
+
+  lblReset();
+}
+
+void lblReset(){
+  int i;
 
   for(i = 0; i < MAXVERTEX; i++){
     lbl[i] = -1;
   }  
+}
+
+void lblDestroy(){
+  free(lbl);
 }
 
 Digraph DIGRAPHinit(int vertexCount){
@@ -90,11 +98,7 @@ void DIGRAPHshow(Digraph G){
 }
 
 int DIGRAPHpath(Digraph G, Vertex s, Vertex t){
-  int i;
-
-  for(i = 0; i < G->V; i++){
-    lbl[i] = -1;
-  }
+  lblReset();
 
   pathR(G,s);
 

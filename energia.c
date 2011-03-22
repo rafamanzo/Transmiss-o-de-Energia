@@ -10,6 +10,7 @@
 #include<stdlib.h>
 #include "ed/vertex.h"
 #include "ed/digraph.h"
+#include "ed/graph.h"
 #include "io.h"
 #include "energia.h"
 
@@ -17,73 +18,28 @@ void solver(){
   int instance;
   Digraph G;
 
+  lblInit();
   instance = 1;
   G = inputInstance();
   while(G != NULL){
     outInstance(instance, processInstance(G));
     instance++;
-    DIGRAPHdestroy(G);
+    GRAPHdestroy(G);
     G = inputInstance();
   }
+  lblDestroy();
 }
 
 int processInstance(Digraph G){
-  int *flag, i, j;
-
-  flag = malloc((G->V)*sizeof(int));
-  for(i = 0; i < G->V; i++){
-    flag[i] = BLUE;
-  }
+  int i, j;
 
   for(i = 1; i < G->V; i++){
-    if(!recursiveCheck(G, i, side, flag)){
-      free(side);
-      free(flag);
-      return 0;
-    }
-    for(j = 1; j < G->V; j++){
-      if(!flag[j]){
-        i = j - 1;
-        j = G->V;
-      }
-    }
-  }
-
-  free(flag);
-  return 1;
-
-}
-
-int recursiveCheck(Digraph G, Vertex actual, int *flag){
-  int i;
-
-  flag[actual] = 1;
-
-  if(side[actual] == STANDING){
-    for(i = 1; i < G->V; i++){
-      if(G->adj[actual][i]){
-        if(side[i] != STANDING){
-          side[actual] = (side[i] % 2) + 1;
-          i = G->V;
-        }
-      }
-    }
-
-    if(side[actual] == STANDING){
-      side[actual] = LEFT;
-    }
-  }
-
-  for(i = 1; i < G->V; i++){
-    if(G->adj[actual][i]){
-      if(side[i] == side[actual]){
+    for(j = i + 1; j < G->V; j++){
+      if(!GRAPHpath(G, i, j)){
         return 0;
-      }else if(side[i] == STANDING){
-        side[i] = (side[actual] % 2) + 1;
-        return recursiveCheck(G, i, side, flag);
       }
     }
   }
-
   return 1;
+
 }
