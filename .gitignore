@@ -1,6 +1,7 @@
 digraph.o
 arc.o
 main.o
+graph.o
 energia.o
 io.o
 input
