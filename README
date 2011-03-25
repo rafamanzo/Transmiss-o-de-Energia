@@ -7,8 +7,8 @@ Segunda tarefa de MAC0328 - Algoritmos em grafos
 Solução para o problema da Transmissão de Energia (https://br.spoj.pl/problems/ENERGIA/) utlizando conceitos básicos de grafos.
 
 Resultados SPOJ:
-* Consumo de memória ?.?M
-* Tempo ?.?s
+* Consumo de memória 1.8M
+* Tempo 0.16s
 
 Ambiente de desenvolvimento:
 
