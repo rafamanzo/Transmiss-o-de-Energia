@@ -12,8 +12,6 @@
 #include "vertex.h"
 #include "digraph.h"
 
-int *lbl;
-
 void lblInit(){
   lbl = malloc(MAXVERTEX*sizeof(int));
 

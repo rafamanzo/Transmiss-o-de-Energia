@@ -28,3 +28,5 @@ void DIGRAPHremoveA(Digraph G, Vertex v, Vertex w);
 void DIGRAPHshow(Digraph G);
 int DIGRAPHpath(Digraph G, Vertex s, Vertex t);
 void pathR(Digraph G, Vertex v);
+
+int *lbl;

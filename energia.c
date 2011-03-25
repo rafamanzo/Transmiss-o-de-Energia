@@ -34,10 +34,11 @@ int processInstance(Digraph G){
   int i, j;
 
   for(i = 1; i < G->V; i++){
-    for(j = i + 1; j < G->V; j++){
-      if(!GRAPHpath(G, i, j)){
-        return 0;
-      }
+    if(i + 1 < G->V){
+      GRAPHpath(G, i, i + 1);
+      for(j = 1; j < G->V; j++)
+        if(lbl[j] == -1)
+          return 0;
     }
   }
   return 1;

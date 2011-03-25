@@ -9,6 +9,7 @@
 
 #include "ed/vertex.h"
 #include "ed/digraph.h"
+#include "ed/graph.h"
 #include "energia.h"
 
 int main(int argc, const char* argv[]){
